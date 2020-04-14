@@ -7,7 +7,7 @@ export default (props) => (
       <ul>
         <li>
           <span>#{props.item.saleCode}</span>
-          <span>{props.item.status}</span>
+          <span className="cashback-status">{props.item.status}</span>
         </li>
         <li>
           <p className="sale-value">
@@ -16,7 +16,7 @@ export default (props) => (
           <p>{props.item.refundPercentage}</p>
         </li>
         <li>
-          <p>12/09/10</p>
+          <p><button type="button" className="btn btn-outline-danger btn-sm">Deletar</button></p>
           <p>
             <strong>R${props.item.cashbackValue}</strong>
           </p>

@@ -12,6 +12,9 @@
   margin: 0%;
   color: #2e4053;
 }
+.cashback-card ul .cashback-status {
+  font-weight: bold;
+}
 .cashback-card ul li:nth-child(1) {
   display: flex;
   flex-direction: row;
@@ -43,6 +46,18 @@
 
 .cashback-card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.reprovado {
+  background-color: #E8978D;
+}
+
+.aprovado {
+  background-color: #8DE895;
+}
+
+.vistoria {
+  background-color: #8DCFE8;
 }
 
 /*# sourceMappingURL=Card.css.map */
