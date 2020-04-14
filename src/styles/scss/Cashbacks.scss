@@ -1,0 +1,21 @@
+.cashback-list {
+
+    padding: 2%;
+
+    .cashback-search {
+      // border: darkslateblue solid 2px;
+      border-radius: 0%;
+    }
+  }
+  
+  .disapproved {
+    background-color: #E8978D;
+  }
+  
+  .approved {
+    background-color: #8DE895;
+  }
+  
+  .inValidation {
+    background-color: #8DCFE8;
+  }
