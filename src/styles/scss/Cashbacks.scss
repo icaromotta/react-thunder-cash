@@ -1,10 +1,24 @@
-.cashback-list {
+.cashback {
 
-    padding: 2%;
-
-    .cashback-search {
-      // border: darkslateblue solid 2px;
-      border-radius: 0%;
+    .cashback-call {
+        padding: 2%; 
+        color: #555;
     }
-  }
+
+    .cashback-list {
+
+        padding: 2%;
+    
+        .cashback-search {
+          // border: darkslateblue solid 2px;
+          border-radius: 0%;
+        }
+
+        h5 {
+           color: #6E6E6E; 
+        }
+    }
+}
+
+
   

@@ -57,16 +57,24 @@ export default class Cashbacks extends Component {
 
   render() {
     return (
-      <div className="mt-3 cashback-list">
-        <div className="mb-3">
-          <input onChange={this.filterList} type="text" className="form-control mb-3" placeholder="status, R$, %" />
-          <div className="row">
-            {this.state.cashbacks.map((cashback) => 
-              <div className="col-md-6 col-lg-3 mb-2" key={cashback._id}>
-                <Card item={cashback} deleteCashback={this.deleteCashback} />
-              </div>
-            )}
-          </div>      
+
+      <div className="cashback">
+        <div className="cashback-call">
+          <h3>Bem-vindo a sua plataforma de reembolso.</h3>
+          <h6>Na Petz você ganha duas vezes, a cada compra feita uma porcetagem do valor volta pra você.</h6>
+        </div>
+        <div className=" cashback-list">
+          <div className="mb-3">
+            <input onChange={this.filterList} type="text" className="form-control mb-3" placeholder="status, R$, %" />
+            <h5 className="mb-3">Meus reembolsos</h5>
+            <div className="row">
+              {this.state.cashbacks.map((cashback) => 
+                <div className="col-md-6 col-lg-3 mb-2" key={cashback._id}>
+                  <Card item={cashback} deleteCashback={this.deleteCashback} />
+                </div>
+              )}
+            </div>      
+          </div>
         </div>
       </div>
     );

@@ -1,8 +1,15 @@
-.cashback-list {
+.cashback .cashback-call {
+  padding: 2%;
+  color: #555;
+}
+.cashback .cashback-list {
   padding: 2%;
 }
-.cashback-list .cashback-search {
+.cashback .cashback-list .cashback-search {
   border-radius: 0%;
+}
+.cashback .cashback-list h5 {
+  color: #6E6E6E;
 }
 
 /*# sourceMappingURL=Cashbacks.css.map */
