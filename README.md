@@ -1,4 +1,4 @@
-ThunderCash - Plataforma de reembolso, para compras realizadas.
+ThunderCash - Plataforma de reembolso para compras realizadas.
 
 Especificações do projeto.
 
