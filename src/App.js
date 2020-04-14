@@ -9,7 +9,7 @@ function App() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-warnning">
         
-          <img style={{ width: '30px' }} src={logo} />
+          <img style={{ width: '30px' }} src={logo} alt="logo" />
           <span style={{ fontWeight: 'bold', color: '#00A0E4'}}>THUNDERCASH</span> 
         
       </nav>

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "../styles/scss/Cashbacks.scss";
+import Swal from 'sweetalert2'
 import Card from "./Card";
 
+import "../styles/scss/Cashbacks.scss";
+
 const EDNPOINT = "https://powerful-basin-11701.herokuapp.com/cashbacks/"
+const DELETE_ENDPOINT = 'http://localhost:3030/cashbacks/'
 
 export default class Cashbacks extends Component {
   constructor(props) {
@@ -14,6 +17,7 @@ export default class Cashbacks extends Component {
     };
     this.loadCashbacks = this.loadCashbacks.bind(this);
     this.filterList = this.filterList.bind(this);
+    this.deleteCashback = this.deleteCashback.bind(this);
   }
 
   componentDidMount() {
@@ -42,15 +46,24 @@ export default class Cashbacks extends Component {
     this.setState({cashbacks: updatedList});
   }
 
+  deleteCashback(cashbackId) {
+    axios.delete(`${DELETE_ENDPOINT}?userId=5e94b72631511200178e4dc0&cashbackId=${cashbackId}`).then((resp) => {this.loadCashbacks()})
+  
+    Swal.fire({
+      text: 'Reembolso excluído!',
+      icon: 'success'
+    })
+  }
+
   render() {
     return (
       <div className="mt-3 cashback-list">
         <div className="mb-3">
-          <input onChange={this.filterList} type="email" className="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <input onChange={this.filterList} type="text" className="form-control mb-3" placeholder="status, R$, %" />
           <div className="row">
             {this.state.cashbacks.map((cashback) => 
               <div className="col-md-6 col-lg-3 mb-2" key={cashback._id}>
-                <Card item={cashback} />
+                <Card item={cashback} deleteCashback={this.deleteCashback} />
               </div>
             )}
           </div>      

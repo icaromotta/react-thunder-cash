@@ -16,7 +16,7 @@ export default (props) => (
           <p>{props.item.refundPercentage}</p>
         </li>
         <li>
-          <p><button type="button" className="btn btn-outline-danger btn-sm">Deletar</button></p>
+          <p><button type="button" className="btn btn-outline-danger btn-sm" onClick={() => props.deleteCashback(props.item._id)}>Deletar</button></p>
           <p>
             <strong>R${props.item.cashbackValue}</strong>
           </p>
